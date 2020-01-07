@@ -1,0 +1,84 @@
+ext {
+    dugs = [
+            keyAlias     : "afdemo",
+            keyPassword  : "123456",
+            storeFile    : "../afdemo.jks",
+            storePassword: "123456",
+    ]
+    cfgs = [
+            appName          : "AfDemo",
+            applicationId    : "cn.appoa.afdemo",
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.3",
+            minSdkVersion    : 18,
+            targetSdkVersion : 28,
+            versionCode      : 200,
+            versionName      : "2.0.0",
+            multiDexEnabled  : true,
+            minifyEnabled    : false,
+            zipAlignEnabled  : true,
+    ]
+    dpes = [
+            //================================================================================//
+            "runner"               : "androidx.test:runner:1.1.1",
+            "espresso"             : "androidx.test.espresso:espresso-core:3.1.1",
+            "annotations"          : "androidx.annotation:annotation:1.1.0",
+            "appcompat"            : "androidx.appcompat:appcompat:1.1.0",
+            "design"               : "com.google.android.material:material:1.0.0",
+            "cardview"             : "androidx.cardview:cardview:1.0.0",
+            "recyclerview"         : "androidx.recyclerview:recyclerview:1.1.0",
+            "exifinterface"        : "androidx.exifinterface:exifinterface:1.1.0",
+            //================================================================================//
+            "adapterhelper"        : "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.0-beta5",//RecyclerView的Adapter
+            "autolayout"           : "com.zhy:autolayout:1.4.5",//屏幕适配
+            "banner"               : "com.youth.banner:banner:1.4.10",//轮播图
+            "blurry"               : "jp.wasabeef:blurry:3.0.0",//高斯模糊
+            "butterknife"          : "com.jakewharton:butterknife:10.2.1",//控件注解
+            "butterknifeannotation": "com.jakewharton:butterknife-compiler:10.2.1",//控件注解
+            "fastblelib"           : "com.clj.fastble:FastBleLib:2.3.4",//蓝牙
+            "fastjson"             : "com.alibaba:fastjson:1.2.62",//json解析
+            "ffmpeglibrary"        : "com.github.kui92:FFmpegLibrary:3.2",//视频框架
+            "fonts"                : "com.github.liangzhongtai:ReplaceFonts:v1.1",//字体
+            "gifdrawable"          : "pl.droidsonroids.gif:android-gif-drawable:1.2.3",//一个开源gif控件
+            "glide"                : "com.github.bumptech.glide:glide:4.10.0",//图片加载
+            "glideannotation"      : "com.github.bumptech.glide:compiler:4.10.0",//图片加载注解
+            "grant"                : "com.anthonycr.grant:permissions:1.1.2",//权限管理
+            "greendao"             : "org.greenrobot:greendao:3.2.2",//greendao数据库
+            "gson"                 : "com.google.code.gson:gson:2.8.6",//json解析
+            "jsoup"                : "org.jsoup:jsoup:1.12.1",//HTML解析器
+            "leakcanary1"          : "com.squareup.leakcanary:leakcanary-android:1.6.3",//内存泄漏
+            "leakcanary2"          : "com.squareup.leakcanary:leakcanary-android-no-op:1.6.3",//内存泄漏
+            "mpchart"              : "com.github.PhilJay:MPAndroidChart:v3.0.3",//曲线图
+            "mpchartutil"          : "com.teaanddogdog:mpandroidchartutil:1.0.3",//饼状图工具
+            "ncalendar"            : "com.necer.ncalendar:ncalendar:3.4.5",//日历
+            "ninegridview"         : "com.lzy.widget:ninegridview:0.2.0",//九宫格图片展示
+            "okgo"                 : "com.lzy.net:okgo:3.0.4",//okgo网络访问
+            "otto"                 : "com.squareup:otto:1.3.8",//事件总线
+            "prdownloader"         : "com.mindorks.android:prdownloader:0.6.0",//文件下载
+            "permissionutils"      : "com.github.ly-android:PermissionUtils:1.0.3",//权限申请
+            "qmui"                 : "com.qmuiteam:qmui:1.4.0",//腾讯UI框架
+            "refreshlayout"        : "com.scwang.smartrefresh:SmartRefreshLayout:1.1.0",//下拉刷新
+            "richeditor"           : "jp.wasabeef:richeditor-android:1.2.2",//富文本编辑器
+            "smarttable"           : "com.github.huangyanbin:SmartTable:2.2.0",//表格
+            "statusbar"            : "com.wangzhen:dark-status-bar:1.0.0",//状态栏
+            "superbutton"          : "top.androidman:superbutton:1.1.1",//超级Button
+            "supertextview"        : "com.github.chenBingX:SuperTextView:3.2.3",//超级TextView
+            "ucrop"                : "com.github.yalantis:ucrop:2.2.4",//图片裁剪
+            "ultraviewpager"       : "com.alibaba.android:ultraviewpager:1.0.7.7@aar",//轮播图
+            "updateapp"            : "com.qianwen:update-app:3.5.2",//版本更新
+            "utilcode"             : "com.blankj:utilcode:1.25.9",//常用工具类
+            "utilcodex"            : "com.blankj:utilcodex:1.25.9",//常用工具类
+            "zxing"                : "com.github.zxing.zxing:core:zxing-3.4.0",//扫码
+            //================================================================================//
+            "afdemox"              : "com.github.lijiazhen1201:AfDemoX:2.0.0-beta1",//全部框架
+            "aframework"           : "com.github.lijiazhen1201.AfDemoX:AFramework:2.0.0-beta1",//基本框架
+            "cropper"              : "com.github.lijiazhen1201.AfDemoX:AndroidImageCropper:2.0.0-beta1",//图片裁剪
+            "jzvideoplayer"        : "com.github.lijiazhen1201.AfDemoX:JiaoZiVideoPlayer:2.0.0-beta1",//视频播放
+            "qrcodescan"           : "com.github.lijiazhen1201.AfDemoX:QrCodeScan:2.0.0-beta1",//二维码扫描
+            "refresh"              : "com.github.lijiazhen1201.AfDemoX:SmartRefreshLayoutFragment:2.0.0-beta1",//下拉刷新
+            "camera"               : "com.github.lijiazhen1201.AfDemoX:WxCameraView:2.0.0-beta1",//视频拍摄
+            "selector"             : "com.github.lijiazhen1201.AfDemoX:WxImageSelector:2.0.0-beta1",//图片选择
+            "voice"                : "com.github.lijiazhen1201.AfDemoX:WxVoiceSelector:2.0.0-beta1",//录音
+            //================================================================================//
+    ]
+}

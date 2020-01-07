@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 200
+        versionName "2.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled cfgs.minifyEnabled
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api "androidx.exifinterface:exifinterface:1.1.0"
+    //api dpes["ucrop"]
+    implementation "androidx.appcompat:appcompat:1.1.0"
+}

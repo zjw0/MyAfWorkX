@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.appoa.wximageselector">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application>
+
+        <!-- 图片多选 -->
+        <activity
+            android:name="cn.appoa.wximageselector.ImageSelectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBlackThemeImage" />
+        <!-- 图片多选预览 -->
+        <activity
+            android:name="cn.appoa.wximageselector.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBlackThemeImage" />
+        <!-- 图片多选裁剪 -->
+        <activity
+            android:name="cn.appoa.wximageselector.ClipImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBlackThemeImage" />
+        <!-- 图片多选视频裁剪 -->
+        <activity
+            android:name="cn.appoa.wximageselector.ClipVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBlackThemeImage" />
+        <!-- 图片大图预览 -->
+        <activity
+            android:name="cn.appoa.wximageselector.ShowBigImageListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppFullThemeImage" />
+
+    </application>
+
+</manifest>
