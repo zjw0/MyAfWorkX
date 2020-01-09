@@ -124,5 +124,8 @@ dependencies {
     releaseImplementation dpes["leakcanary2"]
     //implementation dpes["greendao"]
     //implementation 'com.github.lijiazhen1201:AfDemoX:2.0.0-beta1'
+    //因API改过过大，BaseRecyclerViewAdapterHelper降级为2.9.50版本
+    //框架用2.0.1版本，不然旧项目升级改动太大
+    //implementation 'com.github.lijiazhen1201:AfDemoX:2.0.1-beta1'
 
 }
