@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.zxing.zxing:core:zxing-3.4.0@jar">
     <CLASSES>
-      <root url="jar://F:/Android/.gradle/caches/modules-2/files-2.1/com.github.zxing.zxing/core/zxing-3.4.0/284b84c6d2edfbba652d590f0cd5e5ab2be51e9d/core-zxing-3.4.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.zxing.zxing/core/zxing-3.4.0/284b84c6d2edfbba652d590f0cd5e5ab2be51e9d/core-zxing-3.4.0.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://F:/Android/.gradle/caches/modules-2/files-2.1/com.github.zxing.zxing/core/zxing-3.4.0/f20e75d75540581c99a08d13a3e4954c7738fd8b/core-zxing-3.4.0-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
-      <root url="jar://F:/Android/.gradle/caches/modules-2/files-2.1/com.github.zxing.zxing/core/zxing-3.4.0/fd083769c7fc93f496840cbc0e99e1d1fc132809/core-zxing-3.4.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.zxing.zxing/core/zxing-3.4.0/fd083769c7fc93f496840cbc0e99e1d1fc132809/core-zxing-3.4.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
