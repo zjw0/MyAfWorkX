@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.appoa.afdemo">
 
@@ -16,25 +17,24 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <service
+            android:name=".thread.DownloadService"
+            android:enabled="true"
+            android:exported="true"></service>
         <!-- 启动页 -->
         <activity
             android:name=".StartActivity"
             android:theme="@style/AppSplashTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-        <!-- 主页 -->
+        </activity> <!-- 主页 -->
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTask">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -45,111 +45,62 @@
                     android:host="afdemo.cn"
                     android:scheme="appoa" />
             </intent-filter>
-
-        </activity>
-        <!-- 常用工具类 -->
-        <activity android:name=".activity.CommonUtilsActivity" />
-        <!-- AES加密 -->
+        </activity> <!-- 常用工具类 -->
+        <activity android:name=".activity.CommonUtilsActivity" /> <!-- AES加密 -->
         <activity
             android:name=".activity.AESUtilsActivity"
             android:configChanges="keyboard"
-            android:windowSoftInputMode="adjustPan" />
-        <!-- 主线程和子线程切换 -->
-        <activity android:name=".activity.AsyncRunActivity" />
-        <!-- Activity常用方法封装 -->
-        <activity android:name=".activity.AtyUtilsActivity" />
-        <!-- 时间格式化 -->
-        <activity android:name=".activity.DateUtilsActivity" />
-        <!-- Json解析工具类 -->
-        <activity android:name=".activity.JsonUtilsActivity" />
-        <!-- 地图导航工具类 -->
-        <activity android:name=".activity.MapUtilsActivity" />
-        <!-- Md5加密工具类 -->
-        <activity android:name=".activity.Md5UtilsActivity" />
-        <!-- SpannableString -->
-        <activity android:name=".activity.SpannableStringUtilsActivity" />
-        <!-- 自定义控件 -->
-        <activity android:name=".activity.CustomWidgetActivity" />
-        <!-- HeaderGridView -->
-        <activity android:name=".activity.HeaderGridViewActivity" />
-        <!-- FlowLayout -->
-        <activity android:name=".activity.FlowLayoutActivity" />
-        <!-- GridPasswordView -->
-        <activity android:name=".activity.GridPasswordViewActivity" />
-        <!-- CenterSquareImageView -->
-        <activity android:name=".activity.CenterSquareImageViewActivity" />
-        <!-- SuperImageView -->
-        <activity android:name=".activity.SuperImageViewActivity" />
-        <!-- MaxHeightLayout -->
-        <activity android:name=".activity.MaxHeightLayoutActivity" />
-        <!-- RatioRelativeLayout -->
-        <activity android:name=".activity.RatioRelativeLayoutActivity" />
-        <!-- SwipeMenuDelLayout -->
-        <activity android:name=".activity.SwipeMenuDelLayoutActivity" />
-        <!-- ScrollView嵌套滑动布局 -->
-        <activity android:name=".activity.NoScrollViewActivity" />
-        <!-- HeightWrapViewPager -->
-        <activity android:name=".activity.HeightWrapViewPagerActivity" />
-        <!-- UPMarqueeView -->
-        <activity android:name=".activity.UPMarqueeViewActivity" />
-        <!-- SideBar -->
+            android:windowSoftInputMode="adjustPan" /> <!-- 主线程和子线程切换 -->
+        <activity android:name=".activity.AsyncRunActivity" /> <!-- Activity常用方法封装 -->
+        <activity android:name=".activity.AtyUtilsActivity" /> <!-- 时间格式化 -->
+        <activity android:name=".activity.DateUtilsActivity" /> <!-- Json解析工具类 -->
+        <activity android:name=".activity.JsonUtilsActivity" /> <!-- 地图导航工具类 -->
+        <activity android:name=".activity.MapUtilsActivity" /> <!-- Md5加密工具类 -->
+        <activity android:name=".activity.Md5UtilsActivity" /> <!-- SpannableString -->
+        <activity android:name=".activity.SpannableStringUtilsActivity" /> <!-- 自定义控件 -->
+        <activity android:name=".activity.CustomWidgetActivity" /> <!-- HeaderGridView -->
+        <activity android:name=".activity.HeaderGridViewActivity" /> <!-- FlowLayout -->
+        <activity android:name=".activity.FlowLayoutActivity" /> <!-- GridPasswordView -->
+        <activity android:name=".activity.GridPasswordViewActivity" /> <!-- CenterSquareImageView -->
+        <activity android:name=".activity.CenterSquareImageViewActivity" /> <!-- SuperImageView -->
+        <activity android:name=".activity.SuperImageViewActivity" /> <!-- MaxHeightLayout -->
+        <activity android:name=".activity.MaxHeightLayoutActivity" /> <!-- RatioRelativeLayout -->
+        <activity android:name=".activity.RatioRelativeLayoutActivity" /> <!-- SwipeMenuDelLayout -->
+        <activity android:name=".activity.SwipeMenuDelLayoutActivity" /> <!-- ScrollView嵌套滑动布局 -->
+        <activity android:name=".activity.NoScrollViewActivity" /> <!-- HeightWrapViewPager -->
+        <activity android:name=".activity.HeightWrapViewPagerActivity" /> <!-- UPMarqueeView -->
+        <activity android:name=".activity.UPMarqueeViewActivity" /> <!-- SideBar -->
         <activity
             android:name=".activity.SideBarActivity"
             android:configChanges="keyboard"
-            android:windowSoftInputMode="adjustPan" />
-        <!-- NumberAnimTextView -->
-        <activity android:name=".activity.NumberAnimTextViewActivity" />
-        <!-- WheelView -->
-        <activity android:name=".activity.WheelViewActivity" />
-        <!-- 头像上传 -->
-        <activity android:name=".activity.UploadAvatarActivity" />
-        <!-- 图片多选 -->
+            android:windowSoftInputMode="adjustPan" /> <!-- NumberAnimTextView -->
+        <activity android:name=".activity.NumberAnimTextViewActivity" /> <!-- WheelView -->
+        <activity android:name=".activity.WheelViewActivity" /> <!-- 头像上传 -->
+        <activity android:name=".activity.UploadAvatarActivity" /> <!-- 图片多选 -->
         <activity
             android:name=".activity.UploadImageActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
-        <!-- 视频上传 -->
-        <activity android:name=".activity.UploadVideoActivity" />
-        <!-- 本地视频 -->
-        <activity android:name=".activity.LocalVideoActivity" />
-        <!-- 下拉刷新 -->
-        <activity android:name=".activity.RefreshBeanActivity" />
-        <!-- 下拉刷新 -->
-        <activity android:name=".activity.SmartRefreshActivity" />
-        <!-- 轮播图 -->
-        <activity android:name=".activity.BannerActivity" />
-        <!-- 语音上传 -->
-        <activity android:name=".activity.UploadVoiceActivity" />
-        <!-- WebView的使用 -->
-        <activity android:name=".activity.WebViewActivity" />
-        <!-- Github优秀开源库 -->
-        <activity android:name=".activity.GithubProjectActivity" />
-        <!-- AndroidAutoLayout -->
-        <activity android:name=".activity.AndroidAutoLayoutActivity" />
-        <!-- AndroidUtilCode -->
-        <activity android:name=".activity.AndroidUtilCodeActivity" />
-        <!-- AppUpdate -->
-        <activity android:name=".activity.AppUpdateActivity" />
-        <!-- MPAndroidChart -->
-        <activity android:name=".activity.MPAndroidChartActivity" />
-        <!-- NCalendar -->
-        <activity android:name=".activity.NCalendarActivity" />
-        <!-- OkGo -->
-        <activity android:name=".activity.OkGoActivity" />
-        <!-- PRDownloader -->
-        <activity android:name=".activity.PRDownloaderActivity" />
-        <!-- QMUI_Android -->
-        <activity android:name=".activity.QMUI_AndroidActivity" />
-        <!-- SmartTable -->
-        <activity android:name=".activity.SmartTableActivity" />
-        <!-- SuperButton -->
-        <activity android:name=".activity.SuperButtonActivity" />
-        <!-- SuperTextView -->
-        <activity android:name=".activity.SuperTextViewActivity" />
-        <!-- 微信扫一扫 -->
-        <activity android:name=".activity.ZmQrCodeActivity" />
-        <!-- 微信摇一摇 -->
+            android:configChanges="orientation|keyboardHidden|screenSize" /> <!-- 视频上传 -->
+        <activity android:name=".activity.UploadVideoActivity" /> <!-- 本地视频 -->
+        <activity android:name=".activity.LocalVideoActivity" /> <!-- 下拉刷新 -->
+        <activity android:name=".activity.RefreshBeanActivity" /> <!-- 下拉刷新 -->
+        <activity android:name=".activity.SmartRefreshActivity" /> <!-- 轮播图 -->
+        <activity android:name=".activity.BannerActivity" /> <!-- 语音上传 -->
+        <activity android:name=".activity.UploadVoiceActivity" /> <!-- WebView的使用 -->
+        <activity android:name=".activity.WebViewActivity" /> <!-- Github优秀开源库 -->
+        <activity android:name=".activity.GithubProjectActivity" /> <!-- AndroidAutoLayout -->
+        <activity android:name=".activity.AndroidAutoLayoutActivity" /> <!-- AndroidUtilCode -->
+        <activity android:name=".activity.AndroidUtilCodeActivity" /> <!-- AppUpdate -->
+        <activity android:name=".activity.AppUpdateActivity" /> <!-- MPAndroidChart -->
+        <activity android:name=".activity.MPAndroidChartActivity" /> <!-- NCalendar -->
+        <activity android:name=".activity.NCalendarActivity" /> <!-- OkGo -->
+        <activity android:name=".activity.OkGoActivity" /> <!-- PRDownloader -->
+        <activity android:name=".activity.PRDownloaderActivity" /> <!-- QMUI_Android -->
+        <activity android:name=".activity.QMUI_AndroidActivity" /> <!-- SmartTable -->
+        <activity android:name=".activity.SmartTableActivity" /> <!-- SuperButton -->
+        <activity android:name=".activity.SuperButtonActivity" /> <!-- SuperTextView -->
+        <activity android:name=".activity.SuperTextViewActivity" /> <!-- 微信扫一扫 -->
+        <activity android:name=".activity.ZmQrCodeActivity" /> <!-- 微信摇一摇 -->
         <activity android:name=".activity.ZmShakeActivity" />
-
     </application>
 
 </manifest>
